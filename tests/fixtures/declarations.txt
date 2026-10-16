@@ -1,0 +1,22 @@
+/** Outline documentation */
+export function café<T>({value}: {value: T}): T {
+  const secretImplementation = "😀";
+  return value;
+}
+
+import type { Foo as Alias } from "./types";
+import "./setup/a";
+import "./setup/b";
+export { Foo as Renamed } from "./types";
+export interface Shape {
+  name: string;
+  method<T>(arg: T): {value: T};
+}
+export class Example {
+  field: string = "hiddenInitializer";
+  method({x}: {x: number}): number { return x + 42; }
+}
+export const callable = <T>(value: T): T => { return value; };
+const object = { implementation: "do not print" };
+type Pair = { left: number; right: number };
+enum Mode { One = 1, Two = 2 }

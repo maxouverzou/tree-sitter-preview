@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`native parsing and extraction > outlines declarations without implementations 1`] = `
+"imports: [7-10]
+  export: { Foo as Renamed } from "./types"
+  paths "./setup/": "a", "b"
+  type { Foo as Alias } from "./types"
+
+consts:
+  object = { implementation: "do not print" } [20]
+
+types:
+  export interface Shape [11-14]
+    name: string [12]
+    method<T>(arg: T): {value: T} [13]
+  export class Example [15-18]
+    field: string = … [16]
+    method({x}: {x: number}): number [17]
+  type Pair = { left: number; right: number } [21]
+  enum Mode [22]
+    One = … [22]
+    Two = … [22]
+
+fns:
+  export café<T>({value}: {value: T}): T [1-5]
+  export callable = <T>(value: T): T => … [19]"
+`;
